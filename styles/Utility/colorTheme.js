@@ -1,0 +1,7 @@
+export const primaryColor = '#DE7F49'
+export const secondaryColor = '#393939'
+export const textColor = '#393939'
+export const bodyColor = '#fff'
+export const pHoverColor = '#C47447'
+export const greyColor = '#4B4B4B'
+export const pLightColor = '#FBF0EA'
