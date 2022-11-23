@@ -20,7 +20,7 @@ const HeaderNav = () => {
   return (
     <div>
 
-        <Box sx={styles.navContainer}>
+      <Box sx={styles.navContainer}>
             <Box sx={styles.logoContainer}>
                 <img className='headerLogo' src={'assets/images/osaslogo.jpg'} alt='osas logo' />
                 <Box sx={styles.titleCon}>
@@ -89,6 +89,9 @@ const HeaderNav = () => {
           </Box>
           <DropdownMenu />
         </Box>
+
+      </Box>
+
         <Box sx={styles.chatCon}>
           {
             openChat ?
@@ -106,12 +109,9 @@ const HeaderNav = () => {
 
           }
 
-
-
         </Box>
-
     </div>
-  );
+    );
 };
 
 export default HeaderNav;
