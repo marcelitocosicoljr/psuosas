@@ -36,7 +36,7 @@ const Announcement = () => {
     const [limit,setLimit] = useState(true)
   return (
     <div>
-        <Hero/>
+        <Hero title='Announcements'/>
 
         <Box sx={styles.postCon}>
 
@@ -106,10 +106,10 @@ const Announcement = () => {
 
                 <Box sx={styles.feedBackCon}>
 
-                        <Box sx={styles.iconText}>
+                        {/* <Box sx={styles.iconText}>
                             <Icon icon='mdi:cards-heart' color='#FF725E' width={22}/>
                             <Typography sx={{fontSize:'14px'}}>230 Likes</Typography>
-                        </Box>
+                        </Box> */}
 
                         <Box sx={styles.iconText}>
                             <Icon icon='tabler:message-circle-2' color='#FF725E' width={22}/>

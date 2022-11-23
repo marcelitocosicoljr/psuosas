@@ -4,7 +4,7 @@ import { greyColor } from "../../styles/Utility/colorTheme";
 export const styles = {
     postCon:{
         borderRadius:'15px',
-        width:'70%',
+        width:{xs:'100%',md:'70%'},
         ml:'auto',
         mr:'auto'
 

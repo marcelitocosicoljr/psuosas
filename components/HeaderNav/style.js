@@ -74,7 +74,47 @@ export const styles = {
         display:'flex',
         flexDirection:'row',
         alignItems: 'center',
-    }
+    },
+    chatCon:{
+        position:'fixed',
+        bottom:{xs:'20px',md:'50px'},
+        right:{xs:'20px',md:'50px'},
+        zIndex:3,
+    },
+    openChat:{
+        zIndex:4,
+        position:'absolute',
+        right:{xs:'0px',md:'30px'},
+        bottom:'0px',
+        bgcolor:'#fff',
+        borderRadius:'50%',
+        borderRadius:'30px',
+        boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',
+        '&:hover':{
+            bgcolor:'#F4D4C2'
+        }
+    },
+
+    chatIcon:{
+        width:'25px',
+        height:'25px',
+
+        position:'absolute',
+        top:'-10px',
+        left:'-5px',
+
+    },
+    icon:{
+        width:'50px',
+        objectFit:'contain'
+    },
+    closeChat:{
+        zIndex:4,
+        position:'absolute',
+        right:'0px',
+        background:'#fff',
+
+    },
 
 
 
