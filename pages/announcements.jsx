@@ -11,9 +11,8 @@ const announcements = () => {
       <Header/>
 
       <main className='main'>
+
             <Announcement/>
-
-
       </main>
 
       <Footer/>

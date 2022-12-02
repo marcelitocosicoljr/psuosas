@@ -1,18 +1,23 @@
 import { Icon } from "@iconify/react";
+import { PhotoCamera } from "@mui/icons-material";
 import {
   Box,
   Button,
   FormControl,
+  IconButton,
   InputLabel,
   MenuItem,
   Select,
+  TextareaAutosize,
   TextField,
   Typography,
 } from "@mui/material";
+import ButtonUI from "components/UIComponents/Button/Button";
 import React, { useState } from "react";
 import { primaryColor } from "../../styles/Utility/colorTheme";
 import Hero from "../Hero/Hero";
 import { styles } from "./stlyles";
+
 
 const Announcement = () => {
   const [age, setAge] = useState("");
@@ -43,10 +48,73 @@ const Announcement = () => {
     This concludes the TES Localized Congress 2022. See you on the Regional Congress! ✨`);
 
   const [limit, setLimit] = useState(true);
+
+  const [uploadImg, setUploadImg] = useState(null);
+  const Upload = (e) => {
+    if (e.target.files && e.target.files[0]) {
+        const img = URL.createObjectURL(e.target.files[0]);
+        setUploadImg(img);
+
+    }
+
+  };
+
+
   return (
     <div>
-        <Hero title='Announcements'/>
-      <Hero />
+      <Hero title='Announcements'/>
+
+      <Box sx={styles.postFormCon}>
+
+        <Box sx={styles.postFormBox}>
+
+          <TextareaAutosize
+            aria-label="minimum height"
+            minRows={3}
+            placeholder="Post announcement here.."
+            style={styles.postTextField}
+          />
+
+
+
+        </Box>
+
+        {
+          uploadImg &&
+          <Box sx={styles.postImageUpload}>
+            <img
+              src={uploadImg}
+              alt="post image"
+              style={styles.postImage}
+            />
+        </Box>
+        }
+
+
+
+        <Box sx={styles.postBtns}>
+
+          {
+            uploadImg ?
+            <IconButton color="primary" sx={{bgcolor:'#F5F5F6'}} onClick={()=>setUploadImg(null)}>
+              <Icon icon='flat-color-icons:remove-image'/>
+            </IconButton>
+            :
+            <IconButton color="primary" onChange={(e)=>Upload(e)} aria-label="upload picture" component="label" sx={{bgcolor:'#F5F5F6'}}>
+              <input hidden accept="image/*" type="file" />
+              <Icon icon='flat-color-icons:add-image'/>
+            </IconButton>
+          }
+
+
+
+
+            <ButtonUI text="Post" variant="primary" />
+        </Box>
+
+      </Box>
+
+
 
       <Box sx={styles.postCon}>
         <TextField
@@ -129,7 +197,7 @@ const Announcement = () => {
             />
           </Box>
 
-          <Box sx={styles.feedBackCon}>
+          {/* <Box sx={styles.feedBackCon}>
             <Box sx={styles.iconText}>
               <Icon icon="mdi:cards-heart" color="#FF725E" width={22} />
               <Typography sx={{ fontSize: "14px" }}>230 Likes</Typography>
@@ -139,9 +207,9 @@ const Announcement = () => {
               <Icon icon="tabler:message-circle-2" color="#FF725E" width={22} />
               <Typography sx={{ fontSize: "14px" }}>12 Comments</Typography>
             </Box>
-          </Box>
+          </Box> */}
 
-          <Box sx={styles.commentCon}>
+          {/* <Box sx={styles.commentCon}>
             <Box sx={styles.profileCon}>
               <img
                 className="headerLogo"
@@ -209,7 +277,9 @@ const Announcement = () => {
                 </Box>
               </Box>
             </Box>
-          </Box>
+          </Box> */}
+
+
         </Box>
       </Box>
     </div>

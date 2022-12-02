@@ -84,8 +84,8 @@ const HeaderNav = () => {
         </Box>
         <Box sx={styles.rightButtons}>
           <Box sx={styles.buttonContainer}>
-            <ButtonUi text="Sign in" variant="secondary" />
-            <ButtonUi text="Sign up" variant="primary" />
+            <ButtonUi text="Sign in" variant="primary" />
+            <ButtonUi text="Logout" variant="secondary" />
           </Box>
           <DropdownMenu />
         </Box>

@@ -127,6 +127,49 @@ export const styles = {
         width:'90%',
         background:'transparent',
         outline:'none',
+    },
+    postFormCon:{
+        width:'70%',
+        bgcolor:'#fff',
+        p:'10px',
+        borderRadius:3,
+        boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
+        mx:'auto',
+        mb:2,
+        display:'flex',
+        flexDirection:'column'
+    },
+    postFormBox:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'flex-end'
+    },
+    postTextField:{
+        width:'100%',
+        borderRadius:3,
+        padding:'10px',
+        outline:'none',
+        fontSize:'14px',
+        border:'solid 1px #D4D6D7'
+    },
+    postImageUpload:{
+        maxHeight:'500px',
+        width:'100%',
+        maxWidth:'50%',
+        position:'relative',
+        overflow:'hidden',
+        objectFit: 'contain',
+        objectPosition: 'top',
+        mt:2
+    },
+    postBtns:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'flex-end',
+        alignItems:'flex-end',
+        mt:1,
+        gap:2
     }
 
 }

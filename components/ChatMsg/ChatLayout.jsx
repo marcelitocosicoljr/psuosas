@@ -51,7 +51,7 @@ export default function ChatLayout() {
       <Paper style={classes.paper} zDepth={2}>
         <Paper id="style-1" style={classes.messagesBody}>
           <MessageLeft
-            message="Hello I'm Pesyu! I am glad to here your questions..."
+            message="Hello I'm Pesyu! I am glad to hear your questions..."
             timestamp="Nov 3, 2022 / 2:11pm"
             photoURL="Link thisssss "
             displayName=""
