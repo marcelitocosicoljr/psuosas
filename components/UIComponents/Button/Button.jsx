@@ -1,27 +1,42 @@
-import { Button } from '@mui/material'
-import React from 'react'
-import { pHoverColor, primaryColor, secondaryColor } from '../../../styles/Utility/colorTheme'
-import {styles} from './style'
+import { Button } from "@mui/material";
+import React from "react";
+import {
+  pHoverColor,
+  primaryColor,
+  secondaryColor,
+} from "../../../styles/Utility/colorTheme";
+import { styles } from "./style";
 
-
-const ButtonUI = ({text,variant}) => {
+const ButtonUI = ({ text, variant, disabled = false, onClick }) => {
   return (
-      <Button
-        variant={variant == 'primary' ? 'contained' : variant == 'secondary' ? 'outlined' : 'text'}
-        disableElevation
-        sx={[variant == 'primary' && styles.primaryButton,
-             variant == 'secondary' && styles.secondaryButton,
-             variant == 'text' && styles.textButton,
-             styles.buttonUI,
-         {'&:hover':{
-          bgcolor: variant == 'primary' && secondaryColor,
-          borderColor:variant == 'secondary' && secondaryColor,
-          color:variant == 'secondary' && secondaryColor,
-        }}]}
-        >
-        {text}
-      </Button>
-  )
-}
+    <Button
+      variant={
+        variant == "primary"
+          ? "contained"
+          : variant == "secondary"
+          ? "outlined"
+          : "text"
+      }
+      disableElevation
+      sx={[
+        variant == "primary" && styles.primaryButton,
+        variant == "secondary" && styles.secondaryButton,
+        variant == "text" && styles.textButton,
+        styles.buttonUI,
+        {
+          "&:hover": {
+            bgcolor: variant == "primary" && secondaryColor,
+            borderColor: variant == "secondary" && secondaryColor,
+            color: variant == "secondary" && secondaryColor,
+          },
+        },
+      ]}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {text}
+    </Button>
+  );
+};
 
-export default ButtonUI
+export default ButtonUI;
